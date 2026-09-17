@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ecommerce-vector-ingest-pipeline"
+version = "0.1.0"
+description = "Chunk ecommerce documents, embed them, and upsert vectors with Infrai"
+requires-python = ">=3.11"
+dependencies = [
+  "openai>=1.40.0",
+  "pydantic>=2.7.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
